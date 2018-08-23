@@ -27,7 +27,7 @@ A Diagram of the solution is in the Word document at the root of this repo and a
 
 Notes & Commments:
 - You don't have to use all tiers and you can pick and choose which solutions / projects you intend to leverage
-- All these projects were based on generic examples from Microsoft and were authed in VS 2017 though you could leverage VS Code or another IDE 
+- All these projects were based on generic examples from Microsoft and were authored in VS 2017 though you could leverage VS Code or another IDE 
 
 High Level Steps to setup:
   1. If using Azure SQL create a small Azure SQL single database instance, get the Azure DB service URL/FQDN, a username & pwd, use the script above to create a ClientLog table in your database
