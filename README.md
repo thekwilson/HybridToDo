@@ -9,4 +9,4 @@ Components are:
 
 A Diagram of the solution is in the Word document at the root of this repo.   
 
-![Hybrid Connection Diagram](HybridToDo/HybridConnDiagram.png)
+![Hybrid Connection Diagram](/HybridConnDiagram.png)
