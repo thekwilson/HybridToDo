@@ -1,4 +1,4 @@
-# Elaborate Hybrid Connection Demo/Example
+# Elaborate Azure App Services Hybrid Connection Demo/Example
 
 This repo holds three different applications that work together along with configuration in Azure to demonstrate how you can have a container application in Kubernetes call to an API hosted in App Services that then brokers some API operation/calls to an on-premise endpoint system (in this case Azure Functions) using the App Services Hybrid Connections feature (based on Azure Relay).
 
