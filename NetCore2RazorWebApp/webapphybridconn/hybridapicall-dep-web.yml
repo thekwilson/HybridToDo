@@ -1,0 +1,42 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+  generation: 2
+  labels:
+    app: hybridapi
+  name: hybridapi
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hybridapi
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hybridapi
+      name: hybridapi
+    spec:
+      containers:
+      - env:
+        - name: CONTENT_API_URL
+          value: http://api:3001
+        image: YOURREGISTRY.azurecr.io/YOURIMAGENAME
+        imagePullPolicy: Always
+        name: hybridapi
+        
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: hybridapisecret
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

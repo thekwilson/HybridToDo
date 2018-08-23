@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  webapphybridconn:
+    image: YOURREGISTRY.azurecr.io/YOURIMAGENAME
+    build:
+      context: .
+      dockerfile: webapphybridconn/Dockerfile

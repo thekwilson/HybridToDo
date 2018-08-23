@@ -1,0 +1,11 @@
+services:
+  webapphybridconn:
+    build:
+      context: C:\Users\kywils\source\repos\HybridConnDemo\NetCore2RazorWebApp
+      dockerfile: webapphybridconn/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: YOURREGISTRY.azurecr.io/YOURIMAGENAME
+    ports:
+    - target: 80
+version: '3.4'

@@ -1,0 +1,12 @@
+C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=webapphybridconn
+--content-root=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\About.cshtml
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\Contact.cshtml
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\Error.cshtml
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\Index.cshtml
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\_Layout.cshtml
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\_ValidationScriptsPartial.cshtml
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\_ViewImports.cshtml
+--file=C:\Users\kywils\OneDrive - Microsoft\Project Code\Kubernetes\webapphybridconn\Pages\_ViewStart.cshtml

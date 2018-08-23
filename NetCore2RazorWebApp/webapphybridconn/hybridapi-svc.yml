@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: Service 
+metadata: 
+  labels: 
+    app: hybridapi 
+  name: hybridapi 
+spec: 
+  ports: 
+  - name: web-traffic 
+    port: 80 
+    protocol: TCP 
+  selector: 
+    app: hybridapi 
+  sessionAffinity: None 
+  type: LoadBalancer 
