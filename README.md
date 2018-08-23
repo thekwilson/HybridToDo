@@ -37,7 +37,9 @@ High Level Steps to setup:
      - /api/todo = should return a list of ToDo tasks (json) that are hard coded (3)
      - /api/values/DeviceRecords = this should invoke an attempt to call the Hybrid Connection to invoke the PullRecords API operation on the locally runnin Azure Functions project (note this will return an error if the connection is not up OR the functions project/app is not running)
      - /api/values/logsn/{serialnumber}  (i.e. /api/values/logsn/4978FFG00 =  this should again invoke the Hybrid Connection but this time calling the PersistRecord API write operation published on the local Azure Function
-  4. Setup a Hybrid Connection on your App Service App that is running the Web API.  To do this click on Networking properties and setup the Hybrid Connection (ref article: https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections)
+  4. Setup a Hybrid Connection on your App Service App that is running the Web API.  To do this click on Networking properties and setup the Hybrid Connection (ref article: https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections).   The Hybrid Connection setup will require you to create a service bus relay namespace (or use an existing).  The key to hybrid connections in App Services is that the DNS name resolution for the host is intercepted/routed to a process that reads/writes to the service bus relay queue.   Then the locally installed hybrid connection management agent polls the service bus relay queue for calls to relay/perform.
+  5. Retest as in step #3 to see the connection flowing through
+  6. [Optional] To show how an AKS deployment (containers) can leverage Hybrid Connections you can use the .NET Core Razor App project which comes with a Docker configuration and compose file to build a container image, push it to an Azure Container Registry and then load that image in Kubernetes manifests (see YAML files).   
 
 
 [![Hybrid Connection Diagram](/HybridConnDiagram.png)](https://github.com/thekwilson/HybridToDo/blob/master/Hybrid%20Connection%20Diagrams.docx)
