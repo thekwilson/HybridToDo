@@ -7,6 +7,7 @@ Components are:
 - A Net Core 2.0 MVC Web API app that runs in Azure App Services and acts as a resource called by the containerized app above
 - An on premise Azure Functions app (running preview 2.0 version) that runs on a local machine on a local port 7071 (by default).  The Web API app above makes calls through Hybrid Connections of App Services to this on premise app.
 
-A Diagram of the solution is in the Word document at the root of this repo.   
+A Diagram of the solution is in the Word document at the root of this repo and at the bottom of this readme.
 
-![Hybrid Connection Diagram](/HybridConnDiagram.png)
+
+[![Hybrid Connection Diagram](/HybridConnDiagram.png)](/Hybrid Connection Diagrams.docx)
