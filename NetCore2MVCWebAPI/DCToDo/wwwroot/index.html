@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Todo List: A client for sample REST API in Azure App Service</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+
+<body ng-app="todoApp" role="document">
+    <p></p>
+    <br />
+    <br />
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/Home">Orionbow ToDo System</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" role="main">
+        <div class="row">
+            <h4>
+                This web app has a simple front end UI through javascript to the backend ToDo API that it hosts.
+                <br />
+                There are two API Controllers that hosts:
+                <ol>
+                    <li>/api/values =  This controller has some demo api operations AND the Hybrid operations</li>
+                    <ul>
+                        <li><a href="./api/values">/api/values (get all values)</a></li>
+                        <li><a href="./api/values/1">/api/values/id (get by int id)</a></li>
+                        <li><a href="./api/values/devicerecords">/api/values/devicerecords (get all records over hybrid)</a></li>
+                        <li><a href="./api/values/logsn/99999">/api/values/logsn/SerialNumber (update a record over hybrid)</a></li>
+                    </ul>
+                    <li>/api/todo = This controller has demo api operations used by this web page (below) 
+                        <ul>
+                            <li> <a href="./api/todo">/api/todo (get all todos)</a></li>
+                            <li> <a href="./api/todo/2">/api/todo/todoid(int)</a></li>
+                            <li> <a href="./api/todo/ItemTwo">/api/todo/todoName(string)</a></li>
+                        </ul>
+
+                    <br />
+                    [Optional Note: you need to set the web app URL in the Javascript variable apiendpoint in this index.html file for the UI below to work]</li>
+                    
+                </ol>
+            </h4>
+        </div>
+    </div>
+
+
+    <br />
+
+    <div class="container" role="main">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1" style="background-color:azure">
+                <div class="page-header">
+                    <h1>Todo List</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div ng-view class="panel-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="app/scripts/app.js"></script>
+    <script src="app/scripts/todoListCtrl.js"></script>
+    <script src="app/scripts/todoListSvc.js"></script>
+    <script type="text/javascript">
+
+        // URL of the REST API in Azure App Service http://<appname>.azurewebsites.net
+        var apiEndpoint = "https://YOURWEBSITE.azurewebsites.net";
+    </script>
+</body>
+</html>
